@@ -16,8 +16,11 @@ export function getSimulations(): Simulation[]
 
 export function getSimulation(id: number): Simulation|undefined 
 {
-    console.log(SIMULATIONS.find((simulation) => { simulation.id == id }))
-    return SIMULATIONS.find((simulation) => {simulation.id == id});
+    const simulation: Simulation | undefined = SIMULATIONS.find((simulation) => {
+        return simulation.id === id
+    });
+    
+    return simulation;
 }
 
 export function addSimulation(newSimulation: Simulation): Simulation {
