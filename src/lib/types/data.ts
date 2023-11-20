@@ -12,7 +12,7 @@ export const types = [{
     note: 6.5
 }, {
     value: 3,
-    label: 'SUV 4x4 : 1800-2500kg',
+    label: 'SUV / 4x4 : 1800-2500kg',
     note: 4
 }]
 
@@ -30,7 +30,7 @@ export const energies = [{
     note: 9
 }, {
     value: 4,
-    label: 'Hybrvaluee',
+    label: 'Hybride',
     note: 7
 }, {
     value: 5,
@@ -84,14 +84,35 @@ export const annees = [{
 
 export const passagers = [{
     value: 1,
-    label: '1'
+    label: '1',
+    bonus: 0.11
 }, {
     value: 2,
-    label: '2'
+    label: '2',
+    bonus: -0.17
 }, {
     value: 3,
-    label: '3'
+    label: '3',
+    bonus: -0.29
 }, {
     value: 4,
-    label: '4'
+    label: '4',
+    bonus: -0.53
+}]
+
+export const tauxEmprunts = [{
+    value: 0,
+    taux: 3
+}, {
+    value: 11,
+    bonus: 2.74
+}, {
+    value: 16,
+    bonus: 2.52
+}, {
+    value: 26,
+    bonus: 2.10
+}, {
+    value: 34,
+    bonus: 1.85
 }]

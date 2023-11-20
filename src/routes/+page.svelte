@@ -1,7 +1,7 @@
 
 <div class="container mx-auto">
     
-    <h1 class="h1">Bienvenue sur l'Outil de Calcul de l'Empreinte Écologique de la Green Bank</h1>
+    <h1 class="h1">Bienvenue sur l'outil de simulation d'emprunt pour l'achat d'une voiture</h1>
     
     <div class="card variant-soft p-4 m-4">
         <div class="p-4">
@@ -11,11 +11,10 @@
 
             <h2 class="h2 py-4">Comment ça marche ?</h2>
 
-            <a class="btn bg-gradient-to-br variant-gradient-warning-success color-white m-2" href="/simulation">Créer une simulation</a>
+            <a class="btn bg-gradient-to-br variant-gradient-warning-success color-white m-2" href="/simulations/new">Créer une simulation</a>
 
-            <p class="p-4">Remplissez le formulaire ci-dessous avec des informations sur votre mode de vie quotidien. Notre calculateur vous fournira une estimation de votre impact sur l'environnement.</p>
-
-            <p class="p-4">Une fois le formulaire rempli, cliquez sur le bouton de calcul pour obtenir vos résultats. Découvrez comment vos choix quotidiens affectent l'environnement et explorez des moyens de réduire votre empreinte écologique.</p>
+            <p class="p-4">Remplissez le formulaire avec des informations sur votre mode de vie quotidien. <br>
+            Une fois le formulaire rempli, cliquez sur le bouton de calcul pour obtenir votre taux d'emprunt, influencé par votre empreinte écologique.</p>
         </div>
     </div>
 </div>

@@ -6,11 +6,11 @@
     let loader: boolean = false;
 
     let simulation: Simulation = {
-        type: 1,
-        energie: 1,
-        kilometrage: 1,
-        annee: 1,
-        passagers: 1
+        type: 0,
+        energie: 0,
+        kilometrage: 0,
+        annee: 0,
+        passagers: 0
     };
 
     async function onCompleteHandler(e: Event) {
@@ -41,7 +41,7 @@
         {#if !loader}
             <Stepper on:complete={onCompleteHandler} stepTerm='Étape'>
                 <Step locked={!simulation.type}>
-                    <svelte:fragment slot="header">Selectionner un type de véhicule</svelte:fragment>
+                    <svelte:fragment slot="header">Sélectionner un type de véhicule</svelte:fragment>
                     {#each types as type}
                         <label class="flex items-center space-x-2">
                             <input class="radio" type="radio" name="type" bind:group={simulation.type} value="{type.value}" />
@@ -50,7 +50,7 @@
                     {/each}
                 </Step>
                 <Step locked={!simulation.energie} >
-                    <svelte:fragment slot="header">Energie</svelte:fragment>
+                    <svelte:fragment slot="header">Sélectionner une énergie</svelte:fragment>
                     {#each energies as energie}
                         <label class="flex items-center space-x-2">
                             <input class="radio" type="radio" name="energie" bind:group={simulation.energie} value="{energie.value}" />
@@ -59,7 +59,7 @@
                     {/each}
                 </Step>
                 <Step locked={!simulation.kilometrage} >
-                    <svelte:fragment slot="header">Kilometrage par an</svelte:fragment>
+                    <svelte:fragment slot="header">Sélectionner votre kilometrage annuelle</svelte:fragment>
                     {#each kilometrages as kilometrage}
                         <label class="flex items-center space-x-2">
                             <input class="radio" type="radio" name="kilometrage" bind:group={simulation.kilometrage} value="{kilometrage.value}" />
@@ -68,7 +68,7 @@
                     {/each}
                 </Step>
                 <Step locked={!simulation.annee} >
-                    <svelte:fragment slot="header">Année</svelte:fragment>
+                    <svelte:fragment slot="header">Sélectionner l'année du véhicule</svelte:fragment>
                     {#each annees as annee}
                         <label class="flex items-center space-x-2">
                             <input class="radio" type="radio" name="annee" bind:group={simulation.annee} value="{annee.value}" />
@@ -77,7 +77,7 @@
                     {/each}
                 </Step>
                 <Step locked={!simulation.passagers} >
-                    <svelte:fragment slot="header">Année</svelte:fragment>
+                    <svelte:fragment slot="header">Sélectionner un nombre de passagers</svelte:fragment>
                     {#each passagers as passager}
                         <label class="flex items-center space-x-2">
                             <input class="radio" type="radio" name="passager" bind:group={simulation.passagers} value="{passager.value}" />
