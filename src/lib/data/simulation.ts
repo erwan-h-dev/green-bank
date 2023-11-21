@@ -1,13 +1,35 @@
-export type Simulation = {
-    id?: number;
-    type: number;
-    energie: number;
-    kilometrage: number;
-    annee: number;
-    passagers: number;
-}
+import type { Simulation } from "$lib/models/simulation";
 
-let SIMULATIONS: Simulation[] = [];
+let SIMULATIONS: Simulation[] = [
+    {
+        "id": 1,
+        "type": {
+            "id": 2,
+            "label": "Cabriolet : 1300-2000kg",
+            "note": 6
+        },
+        "energie": {
+            "id": 1,
+            "label": "Essence",
+            "note": 5
+        },
+        "kilometrage": {
+            "id": 1,
+            "label": "5000-10000km",
+            "note": 9
+        },
+        "annee": {
+            "id": 1,
+            "label": "1960 - 1970",
+            "note": 1
+        },
+        "passagers": {
+            "id": 1,
+            "label": "1",
+            "note": 0.11
+        },
+    }
+];
 
 export function getSimulations(): Simulation[] 
 {

@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { getSimulations } from '$lib/types/simulation';
+import { getSimulations } from '$lib/data/simulation';
 
 export const load = (async () => {
 
