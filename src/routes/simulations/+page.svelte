@@ -45,10 +45,10 @@
 
 <div class="container mx-auto">
         
-    <h1 class="h1">Liste de vos simulations </h1>
+    <h1 class="h1">Liste de vos simulations</h1>
 
     <div class="card variant-soft p-4 m-4">
-        <Table source={{
+        <Table class="table-auto" source={{
                 head: tableHead, 
                 body: tableMapperValues(simulationsPagined,  ['id','type','energie','kilometrage','annee','passagers','note']), 
                 meta: tableSourceMapper(simulationsPagined,  ['id']),
