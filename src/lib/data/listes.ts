@@ -84,35 +84,40 @@ export const annees = [{
 
 export const passagers = [{
     value: 1,
-    label: '1',
+    label: '1 passager',
     bonus: 0.11
 }, {
     value: 2,
-    label: '2',
+    label: '2 passagers',
     bonus: -0.17
 }, {
     value: 3,
-    label: '3',
+    label: '3 passagers',
     bonus: -0.29
 }, {
     value: 4,
-    label: '4',
+    label: '4 passagers',
     bonus: -0.53
 }]
 
 export const tauxEmprunts = [{
-    value: 0,
+    min: 0,
+    max: 10,
     taux: 3
 }, {
-    value: 11,
+    min: 11,
+    max: 15,
     bonus: 2.74
 }, {
-    value: 16,
+    min: 16,
+    max: 25,
     bonus: 2.52
 }, {
-    value: 26,
+    min: 26,
+    max: 33,
     bonus: 2.10
 }, {
-    value: 34,
+    min: 34,
+    max: 40, 
     bonus: 1.85
 }]

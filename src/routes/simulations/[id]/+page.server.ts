@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit'; 
-import { getSimulation } from '$lib/data/simulation';
+import { getSimulation } from '$lib/data/simulationService';
 import type { PageServerLoad } from './$types';
 
 export const load = (async ({ params }) => {

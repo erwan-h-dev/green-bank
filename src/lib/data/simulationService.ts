@@ -1,35 +1,7 @@
 import type { Simulation } from "$lib/models/simulation";
+import { tauxEmprunts } from "./listes";
 
-let SIMULATIONS: Simulation[] = [
-    {
-        "id": 1,
-        "type": {
-            "id": 2,
-            "label": "Cabriolet : 1300-2000kg",
-            "note": 6
-        },
-        "energie": {
-            "id": 1,
-            "label": "Essence",
-            "note": 5
-        },
-        "kilometrage": {
-            "id": 1,
-            "label": "5000-10000km",
-            "note": 9
-        },
-        "annee": {
-            "id": 1,
-            "label": "1960 - 1970",
-            "note": 1
-        },
-        "passagers": {
-            "id": 1,
-            "label": "1",
-            "note": 0.11
-        },
-    }
-];
+let SIMULATIONS: Simulation[] = [];
 
 export function getSimulations(): Simulation[] 
 {
@@ -60,4 +32,28 @@ export function addSimulation(newSimulation: Simulation): Simulation {
 export function deleteSimulation(id: number): void 
 {
     SIMULATIONS = SIMULATIONS.filter((simulation) => simulation.id != id);
+}
+
+export function tauxDemprunt(simulation: Simulation) {
+    const noteTotal = getNote(simulation)
+
+    const taux = simulation.passagers.bonus
+
+    const tauxEmprunt = tauxEmprunts.find((taux) => {
+        // return if noteTotal is between min and max
+        return noteTotal >= taux.min && noteTotal <= taux.max
+    })
+    console.log(taux + tauxEmprunt.bonus)
+    return taux + tauxEmprunt.bonus
+}
+
+export function getNote(simulation: Simulation): number {
+    let totalNote = 0
+
+    totalNote += simulation.type.note || 0
+    totalNote += simulation.energie.note || 0
+    totalNote += simulation.kilometrage.note || 0
+    totalNote += simulation.annee.note || 0
+
+    return totalNote
 }
